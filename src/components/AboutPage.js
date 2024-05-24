@@ -1,8 +1,6 @@
 import React from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes';
-
-
+import { DarkTheme } from './Themes';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
@@ -34,7 +32,7 @@ img{
     height: auto;
 }
 `
-const Main =  styled.div`
+const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
@@ -61,31 +59,31 @@ const Main =  styled.div`
 const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='dark'/>
-<SocialIcons theme='dark'/>
-<PowerButton />
-<ParticleComponent theme='dark' />
+                <LogoComponent theme='dark' />
+                <SocialIcons theme='dark' />
+                <PowerButton />
+                <ParticleComponent theme='dark' />
 
-        <Spaceman>
-            <img src={astronaut} alt="spaceman" />
-        </Spaceman>    
-        <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
-        </Main>
+                <Spaceman>
+                    <img src={astronaut} alt="spaceman" />
+                </Spaceman>
+                <Main>
+                    Welcome to my comprehensive portfolio showcasing the culmination of two years of dedicated experience as a frontend web developer.
+                    <br /> <br />
+                    Throughout this journey, I've immersed myself in the world of web development, honing my skills, exploring new technologies, and creating captivating digital experiences.
+                    <br /> <br />
+                    This portfolio serves as a testament to my passion for crafting user-centric designs and my commitment to delivering high-quality solutions.
+                </Main>
 
-        <BigTitle text="ABOUT" top="10%" left="5%" />
+                <BigTitle text="ABOUT" top="10%" left="5%" />
 
 
-        </Box>
+            </Box>
 
         </ThemeProvider>
-        
+
     )
 }
 

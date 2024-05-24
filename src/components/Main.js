@@ -36,15 +36,15 @@ right: calc(1rem + 2vw);
 text-decoration: none;
 z-index:1;
 `
-const BLOG = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 50%;
-right: calc(1rem + 2vw);
-transform: rotate(90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index:1;
-`
+// const BLOG = styled(NavLink)`
+// color: ${props => props.theme.text};
+// position: absolute;
+// top: 50%;
+// right: calc(1rem + 2vw);
+// transform: rotate(90deg) translate(-50%, -50%);
+// text-decoration: none;
+// z-index:1;
+// `
 const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 
@@ -142,10 +142,10 @@ const Main = () => {
            
             <Center click={click}>
                 <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span>click here</span>
+                <span><h2 style={{fontSize:"30px", fontWeight:"bolder"}}>Click here</h2></span>
             </Center>
 
-            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+            <Contact target="_blank" href="mailto:rajkarthi040@gmail.com">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -162,7 +162,7 @@ const Main = () => {
                     Say hi..
                 </motion.h2>
             </Contact>
-            <BLOG to="/blog">
+            {/* <BLOG to="/blog">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -177,7 +177,7 @@ const Main = () => {
                 >
                     Blog
                 </motion.h2>
-            </BLOG>
+            </BLOG> */}
             <WORK to="/work" click={+click}>
                 <motion.h2
                 initial={{
